@@ -4,7 +4,9 @@ class SignupsController < ApplicationController
         render json: Signup.all
     end
 
-    def destory 
-        
+    def create  
+        signup = Signup.create(signups_params_permit)
+        render json: signup,serializer: SigupReturnSerializer, status: :created 
     end
+
 end

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :activities, only: [:index, :destroy]
-  resources :signups, only: [:index]
+  resources :activities, only: [:index, :show, :destroy]
+  resources :signups, only: [:index, :create]
   resources :campers, only:[:index, :show, :create, :destroy]
 
   # get '/campers/:id/', to: 'campers#show'
